@@ -1,0 +1,34 @@
+{
+    "name": "ophaant/lapostal",
+    "description": "Seeder Data Postal Code in Indonesia",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "Ophaant\\Lapostal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ophaant",
+            "email": "ophaant@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3|^8.1|^8.2",
+        "laravel/framework": "^9.0|^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ophaant\\Lapostal\\LapostalServiceProvider"
+            ],
+            "aliases": {
+                "Survey": "Ophaant\\Lapostal\\Facade"
+            }
+        }
+    }
+}
