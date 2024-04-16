@@ -1,3 +1,7 @@
+publish:
+  needs: [ build ]
+  runs-on: ubuntu-latest
+  
 steps:
   - name: Checkout
     uses: actions/checkout@v4
@@ -10,4 +14,3 @@ steps:
         @semantic-release/git
     env:
       GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
