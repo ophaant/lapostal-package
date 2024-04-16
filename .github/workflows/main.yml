@@ -1,18 +1,18 @@
 on: push
 
-publish:
-  needs: [ build ]
-  runs-on: ubuntu-latest
+jobs:
+  publish:
+    runs-on: ubuntu-latest
   
-steps:
-  - name: Checkout
-    uses: actions/checkout@v4
-  - name: Semantic Release
-    uses: cycjimmy/semantic-release-action@v4
-    with:
-      # You can specify specifying version range for the extra plugins if you prefer.
-      extra_plugins: |
-        @semantic-release/changelog@6.0.0
-        @semantic-release/git
-    env:
-      GITHUB_TOKEN: ${{ secrets.TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          # You can specify specifying version range for the extra plugins if you prefer.
+          extra_plugins: |
+            @semantic-release/changelog@6.0.0
+            @semantic-release/git
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
