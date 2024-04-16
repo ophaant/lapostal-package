@@ -1,0 +1,11 @@
+{
+    "name": "lapostal",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ophaant/lapostal-package.git"
+    },
+    "private": true,
+    "release": {
+        "branches": ["master", "next"]
+    }
+}
