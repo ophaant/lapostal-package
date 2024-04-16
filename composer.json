@@ -3,7 +3,6 @@
     "description": "Seeder Data Postal Code in Indonesia",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
     "autoload": {
         "psr-4": {
             "Ophaant\\Lapostal\\": "src/"
