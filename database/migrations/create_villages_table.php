@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('village_code', 13);
             $table->string('village_name', 100);
+            $table->integer('postal_code');
             $table->foreignIdFor(Subdistrict::class);
             $table->timestamps();
         });
