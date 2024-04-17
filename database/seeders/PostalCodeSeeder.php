@@ -46,6 +46,7 @@ class PostalCodeSeeder extends Seeder
                 'village_code' => $data['village_code'],
                 'village_name' => $data['village_name'],
                 'subdistrict_id' => $subdistrict->id,
+                'postal_code' => $data['postal_code'],
                 // Add other village fields as needed
             ]);
             $this->command->getOutput()->progressAdvance();
